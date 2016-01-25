@@ -1,0 +1,26 @@
+@import	"libs/settings";
+@import	"libs/mixins";
+$browser-context: 14; // Default
+
+body {
+	color: $body-color;
+	font-size: #{$browser-context}px;
+	font-weight: normal;
+	line-height: 1.5;
+	font-smoothing: antialiased; 
+	-webkit-font-smoothing: antialiased; 
+	-ms-word-wrap: break-word;
+	word-wrap: break-word;
+}
+h1, h2, h3, h4, h5, h6 {
+}
+a { 
+	text-decoration: none;
+	transition: .3s ease;
+	color: $link-color;
+	&:focus,
+	&:hover {
+		text-decoration: none;
+		color: $grey;
+	}
+}

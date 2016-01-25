@@ -1,0 +1,126 @@
+@mixin clearfix {
+	&:before, &:after {
+		content: " ";
+		display: table;
+	}
+	&:after {
+		clear: both;
+	}
+}
+
+@mixin section-title($fontsize:30px) {
+	font-size: $fontsize;
+	font-weight: normal;
+	line-height: 1em;
+}
+@mixin input($height:36px, $fontsize:12px) {
+	border: 2px solid $muted-color;
+	height: $height;
+	border-radius: 0;
+	padding: 0 10px;
+	font-size: $fontsize;
+}
+@mixin select($height:36px, $fontsize:12px, $background:none){
+	border: none;
+	box-shadow: none;
+	height: $height;
+	font-size: $fontsize;
+	font-weight: normal;
+	text-transform: capitalize;
+	border-radius: 0 !important;
+	padding: 0 10px 0px 0px;
+	position: relative;
+	color: #a9a9a9;
+	line-height: 32px;
+	background: $background;
+}
+@mixin textarea($height:100px, $fontsize:12px) {
+	border: 2px solid $secondary-color;
+	min-height: $height;
+	border-radius: 0;
+	padding: 10px;
+	font-size: $fontsize;
+}
+@mixin button($height:36px, $fontsize:12px) {
+	margin-bottom: 0px;
+	padding: 0 20px;
+	text-transform: uppercase;
+	text-align: center;
+	display: inline-block;
+	font-size: $fontsize;
+	height:$height;
+	line-height:($height - 4px);
+	border-radius: 4px;
+	background: $secondary-hover;
+	border: 2px solid $secondary-hover;
+	color: $white;
+	font-weight: normal;
+	border-radius: 20px;
+
+	&:hover {
+		color: $white;
+		background: $hover-violet;
+	}
+}
+@mixin button-alt($height:36px, $fontsize:12px) {
+	padding: 0 20px;
+	text-transform: uppercase;
+	text-align: center;
+	font-size: $fontsize;
+	height:$height;
+	line-height:($height - 4px);
+	border-radius: 0;
+	background: none;
+	border: 2px solid $strong-color;
+	color: $strong-color;
+	&:hover {
+		background: none;
+		border-color: $muted-color;
+		color: $muted-color;
+	}
+}
+
+@mixin size($width, $height:$width){
+	width : $width;
+	height: $height;
+}
+
+@mixin cover(){
+	position:absolute;
+	left    :0;
+	right   :0;
+	top     :0;
+	bottom  :0;
+}
+
+@mixin auto_center($width, $height:$width){
+	@include cover();
+	margin: auto;
+}
+
+
+// Converting PX value to EM based on browser-context variable
+// Usage: @include em(16)
+@mixin em($pixels, $context: $browser-context) {
+	font-size: #{$pixels}px;
+	// font-size: #{$pixels/$context}em;
+}
+
+@mixin rem($pixels, $context: $browser-context) {
+	font-size: #{$pixels}px;
+	// font-size: #{$pixels/$context}rem;
+}
+
+@mixin label-title {
+	@include em(26);
+	margin-top: 0px;
+	position: relative;
+	// display: inline-block;
+}
+
+@mixin text-ellipsis {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+

@@ -1,0 +1,118 @@
+.site-footer {
+	padding: 40px 0px 30px;
+	text-align: center;
+	background: #fff;
+	font-size: 12px;
+}
+
+.footer-social {
+	margin: 0;
+	padding: 15px 0;
+	ul {
+		margin: 0px;
+		padding: 0px;
+		li {
+			display: inline-block;
+			list-style: none;
+			padding: 0px 10px;
+		}
+	}
+	a {
+		color: $body-color;
+		font-size: 14px;
+		&:hover {
+			i.fa-facebook 	 { color: $facebook;}
+			i.fa-twitter 	 { color: $twitter;}
+			i.fa-instagram 	 { color: $instagram;}
+			i.fa-pinterest-p { color: $pinterest;}
+			i.fa-google-plus { color: $google-plus;}
+			i.fa-rss 		 { color: $rss;}
+			i.fa-envelope-o  { color: $secondary-color;}
+			i.fa-youtube 	 { color: $youtube;}
+			i.fa-flickr 	 { color: $flickr;}
+			i.fa-linkedin 	 { color: $linkedin;}
+			i.fa-pinterest 	 { color: $pinterest;}
+			i.fa-dribbble 	 { color: $dribbble;}
+			i.fa-github 	 { color: $github;}
+			i.fa-lastfm 	 { color: $lastfm;}
+			i.fa-vimeo-square{ color: $vimeo;}
+			i.fa-tumblr 	 { color: $tumblr;}
+			i.fa-soundcloud  { color: $soundcloud;}
+			i.fa-behance 	 { color: $behance;}
+			i.fa-deviantart  { color: $deviantart;}
+		}
+	}
+}
+
+.footer-menu-wrap {
+	text-align: center;
+	display: inline-block;
+	ul{
+		display: inline-block;
+		li {
+			font-size: 12px;
+			text-transform: uppercase;
+			a, a:visited {
+				color: $body-color;
+			}
+			a:hover, a:focus {
+				color: $strong-color;
+				background: none;
+			}
+			.caret {
+				display: block;
+			}
+		}
+	}
+	.navbar-nav>li {
+		float: left;
+	}
+	.navbar-nav>li>a {
+	    padding-top: 15px;
+	    padding-bottom: 15px;
+	}
+}
+
+.footer-credit {
+	font-size: 12px;
+	text-transform: uppercase;
+	a, a:visited {
+		color: $body-color;
+	}
+	a:hover, a:focus {
+		color: $strong-color;
+	}
+	p {
+		margin: 0;
+		padding: 15px 0 15px 0;
+	}
+}
+
+@media (min-width: 992px) {
+	.section-site-footer.footer-social-nav-active {
+		.footer-social {
+			float: left;
+			text-align: left;
+			padding-bottom: 5px;
+			ul {
+				li {
+					padding: 0px 20px 0 0;
+				}
+			}
+		}
+		.footer-menu-wrap {
+			float: right;
+			text-align: right;
+			padding-bottom: 10px;
+			.navbar-nav>li>a {
+			    padding-left: 30px;
+			    padding-right: 0;
+			}
+		}
+		.footer-credit {
+			clear: both;
+			border-top: 1px solid #f2f2f2;
+			padding-top: 10px;
+		}
+	}
+}
